@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "appSettings": {
+      "title": "App Settings",
+      "description": "Global application settings such as logo, theme, and banners.",
+      "type": "object",
+      "properties": {
+        "canvasBg": { "type": "string" },
+        "logoUrl": { "type": "string" },
+        "appTitle": { "type": "string" },
+        "appSubtitle": { "type": "string" },
+        "heroBannerUrl": { "type": "string" },
+        "mapImg": { "type": "string" },
+        "promoBanners": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "number" },
+              "image": { "type": "string" },
+              "title": { "type": "string" }
+            }
+          }
+        },
+        "pins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "number" },
+              "top": { "type": "number" },
+              "left": { "type": "number" },
+              "color": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/appSettings/{documentId}": {
+      "schema": "appSettings",
+      "description": "Stores the global settings."
+    }
+  }
+}

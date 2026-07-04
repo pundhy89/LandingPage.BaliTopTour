@@ -1,0 +1,6 @@
+{
+  "name": "Bali Top Tour",
+  "description": "A 3D, modern, and cheerful landing page for Bali Top Tour showcasing tour packages, activities, and services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
