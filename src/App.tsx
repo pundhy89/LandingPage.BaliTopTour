@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, CheckCircle2, ShieldCheck, Ticket, Bell, Map as MapIcon, Star, Palmtree, ChevronRight, Settings, X, Loader2, Wallet, MousePointerClick, PiggyBank, Clock, User, Users, PartyPopper } from 'lucide-react';
+import { Search, CheckCircle2, ShieldCheck, Ticket, Bell, Map as MapIcon, Star, Palmtree, ChevronRight, Settings, X, Loader2, Wallet, MousePointerClick, PiggyBank, Clock, User, Users, PartyPopper, Download } from 'lucide-react';
 import { doc, onSnapshot, setDoc } from 'firebase/firestore';
 import { db } from './firebase';
 
@@ -1009,11 +1009,21 @@ export default function App() {
           </div>
         </section>
 
+        {/* DOWNLOAD BUTTON APK */}
+        <div className="fixed bottom-6 w-full max-w-[480px] px-5 z-50 left-1/2 -translate-x-1/2">
+          <a 
+            href="https://github.com/pundhy89/BaliTopTour.New/releases/download/v1.0.0/BaliTopTour.v3.apk"
+            className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black py-4 px-6 rounded-2xl shadow-lg hover:shadow-xl transform transition-all active:scale-95 border-b-4 border-blue-800 uppercase tracking-wider"
+          >
+            <Download className="w-5 h-5" /> Download App (APK)
+          </a>
+        </div>
+
         {/* PROMO BANNERS */}
         <PromoCarousel banners={promoBanners} />
         
         {/* BOTTOM SLIDE TO DOWNLOAD */}
-        <div className="w-full bg-white/50 backdrop-blur-md p-4 border-t border-white/50 z-50 shadow-[0_-4px_15px_rgba(0,0,0,0.05)] pb-6 mt-4 flex flex-col items-center">
+        <div className="w-full bg-white/50 backdrop-blur-md p-4 border-t border-white/50 z-50 shadow-[0_-4px_15px_rgba(0,0,0,0.05)] pb-28 mt-4 flex flex-col items-center">
           <SlideToDownload downloadUrl={downloadUrl} />
           <div className="mt-3 flex items-center gap-1.5 text-gray-500 text-[10px] font-bold">
             Powered by: 
